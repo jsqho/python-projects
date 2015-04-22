@@ -1,9 +1,5 @@
 import sys
 
-input_1 = '000000000'
-input_2 = '111111111'
-input_3 = '490067715'
-
 def inputToList(nums):
 		index = []
 		for x in nums:
@@ -34,5 +30,10 @@ def bannerNumbers(acct_number):
     	print("\n"),
     	level = level + 1
 
+input_1 = '000000000'
+input_2 = '111111111'
+input_3 = '490067715'
 
-bannerNumbers("123456789")
+bannerNumbers(input_1)
+bannerNumbers(input_2)
+bannerNumbers(input_3)
