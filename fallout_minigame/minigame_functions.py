@@ -35,5 +35,17 @@ def formatForGameplay(words, difficulty):
 
 	return list_for_user
 
+def wordCheck(user_guess, solution_word):
+	number_of_correct = 0
+	result_of_guess = False
+	for x in user_guess:
+		if x in solution_word:
+			number_of_correct = number_of_correct + 1
+
+	return number_of_correct
+
+
+
+
 
 
