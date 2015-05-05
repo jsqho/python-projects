@@ -1,4 +1,4 @@
-grade_list_tuples = [["John","85"],["Bob","90"], ["Josh", "87"]]
+grade_list_tuples = []
 
 
 #OPTION 1. Done.
@@ -11,9 +11,11 @@ def add_modify_student_grade():
 		for name_grade in grade_list_tuples:
 			if name == name_grade[0]:
 				name_grade[1] = grade
+				break
 			else:
 				grade_list_tuples.append([name,grade])
-	print grade_list_tuples
+				break
+
 
 #Option 2. Done
 def remove_student():
@@ -21,18 +23,21 @@ def remove_student():
 	for name_grade in grade_list_tuples:
 		if name_of_student == name_grade[0]:
 			grade_list_tuples.remove(name_grade)
+			break
 		else:
 			pass
-	print grade_list_tuples
+
 
 #Option 3. Done
 def show_in_alpha_order():
 	sorted_grade_list = sorted(grade_list_tuples)
-	print "-----Displaying Grades-----"
+	print "\n-----Displaying Grades-----"
 	for name_grade in sorted_grade_list:
 		print name_grade[0] + " : " + name_grade[1]
-	print "-----Done Displaying Grades-----"
+	print "-----Done Displaying Grades-----\n"
 
+
+#Option 4. Done.
 def class_stats():
 	#Mean Calculation
 	total_points = 0
@@ -46,7 +51,14 @@ def class_stats():
 		points_list.append(name_grade[1])
 	sorted_points_list = sorted(points_list)
 	median = sorted_points_list[len(sorted_points_list)/2]
-	print median
 
+	mode_list = []
+	for name_grade in grade_list_tuples:
+		mode_list.append(name_grade[1])
+	mode = max(set(mode_list), key=mode_list.count)
 
-	
+	print "\n-----Displaying Statistics-----"
+	print "Mean : %i" % mean
+	print "Median: " + median
+	print "Mode: " + mode
+	print "-----Done Displaying Statistics-----\n"
