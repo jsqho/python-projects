@@ -1,0 +1,47 @@
+def display_hangman(number_of_wrong):
+    if number_of_wrong == 1:
+        print "  |"
+    elif number_of_wrong == 2:
+        print "  |"
+        print "  0"
+    elif number_of_wrong == 3:
+        print "  |"
+        print "  0"
+        print "  |"
+    elif number_of_wrong == 4:
+        print "  |"
+        print "  0"
+        print "/ |"
+    elif number_of_wrong == 5:
+        print "  |"
+        print "  0"
+        print "/ | \\"
+    elif number_of_wrong == 6:
+        print "  |"
+        print "  0"
+        print "/ | \\"
+        print " /"
+    else:
+        print "  |"
+        print "  0"
+        print "/ | \\"
+        print " / \\"            
+
+input_word = raw_input("Please enter a word to be guessed \nthat does not contain ? or white space: ")
+
+number_of_guesses = 0
+char_list = enumerate(list(input_word))
+q = list("?" * len(input_word))
+while number_of_guesses < 7:
+    guess = raw_input("Enter a guess letter: ")
+    for element in char_list:
+        print element[0]
+        print element[1]
+
+
+    
+    
+
+
+
+
